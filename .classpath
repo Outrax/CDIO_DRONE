@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry excluding="sample/" kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="lib" path="lib/core.jar"/>
 	<classpathentry kind="lib" path="lib/xuggle-xuggler-5.4.jar"/>
 	<classpathentry kind="lib" path="lib/slf4j-api-1.7.2.jar"/>
@@ -14,6 +14,17 @@
 	<classpathentry kind="lib" path="lib/reflections/reflections-0.9.9-RC1.jar"/>
 	<classpathentry kind="lib" path="lib/zxing/core-2.2.jar"/>
 	<classpathentry kind="lib" path="lib/zxing/javase-2.2.jar"/>
+	<classpathentry kind="lib" path="zxingorg-3.3.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="whiteBalance.jar"/>
+	<classpathentry kind="lib" path="slf4j-jdk14-1.7.23.jar"/>
+	<classpathentry kind="lib" path="slf4j-api-1.7.23.jar"/>
+	<classpathentry kind="lib" path="commons-net-3.2.jar"/>
+	<classpathentry kind="lib" path="core-3.3.0.jar"/>
+	<classpathentry kind="lib" path="forms_rt.jar"/>
+	<classpathentry kind="lib" path="javase-3.3.0.jar"/>
+	<classpathentry kind="lib" path="logback-core-1.2.1.jar"/>
+	<classpathentry kind="lib" path="xuggle-xuggler-5.4.jar"/>
+	<classpathentry kind="lib" path="yadrone_032.jar"/>
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/OpenCV">
 		<attributes>

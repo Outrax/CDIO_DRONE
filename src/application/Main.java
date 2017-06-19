@@ -1,5 +1,5 @@
-	package application;
-	
+package application;
+
 import org.opencv.core.Core;
 
 import javafx.application.Application;
@@ -34,11 +34,6 @@ public class Main extends Application {
 	{
 		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 		
-		
 		de.yadrone.apps.paperchase.PaperChase.main(args);
-		System.out.println("PAPERCHASE INSTANTIERET");
-		
-		//launch(args);
-		
 	}
 }

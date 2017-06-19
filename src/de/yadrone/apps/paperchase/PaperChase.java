@@ -1,5 +1,8 @@
 package de.yadrone.apps.paperchase;
 
+import de.yadrone.apps.controlcenter.plugins.altitude.AltitudeChart;
+import de.yadrone.apps.controlcenter.plugins.configuration.ConfigurationPanel;
+import de.yadrone.apps.controlcenter.plugins.statistics.StatisticsPanel;
 import de.yadrone.apps.paperchase.controller.PaperChaseAbstractController;
 import de.yadrone.apps.paperchase.controller.PaperChaseAutoController;
 import de.yadrone.apps.paperchase.controller.PaperChaseKeyboardController;
@@ -23,8 +26,13 @@ public class PaperChase
 	{
 		drone = new ARDrone();
 		drone.start();
-		drone.getCommandManager().setVideoChannel(VideoChannel.HORI);
 		
+		drone.up();
+		drone.getCommandManager().setVideoChannel(VideoChannel.HORI);
+	
+		new AltitudeChart();
+		new ConfigurationPanel();
+		new StatisticsPanel();
 		PaperChaseGUI gui = new PaperChaseGUI(drone, this);
 		
 		// keyboard controller is always enabled and cannot be disabled (for safety reasons)
@@ -38,10 +46,13 @@ public class PaperChase
 		scanner.addListener(gui);
 		
 		objectdetection = new ObjectDetection();
+		
 		drone.getVideoManager().addImageListener(objectdetection);
 		
 		drone.getVideoManager().addImageListener(gui);
 		drone.getVideoManager().addImageListener(scanner);
+		drone.setMinAltitude(2000);
+		drone.setMaxAltitude(2500);
 	}
 	
 	public void enableAutoControl(boolean enable)

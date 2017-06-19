@@ -947,4 +947,9 @@ public class CommandManager extends AbstractManager
 		}
 	}
 
+	public void calibrateMagnetometer() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

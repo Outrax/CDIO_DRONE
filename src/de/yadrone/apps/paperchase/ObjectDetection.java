@@ -41,6 +41,10 @@ public class ObjectDetection implements ImageListener {
 			 Mat gray = new Mat();
 			 frame.put(0, 0, data);
 
+			 
+			// System.out.println(image.getHeight());
+			// System.out.println(image.getWidth());
+			 
 			 Imgproc.cvtColor(frame, gray, Imgproc.COLOR_BGR2GRAY );
 			 Imgproc.GaussianBlur(gray, gray ,new Size(9, 9), 2, 2 );
 
@@ -59,8 +63,8 @@ public class ObjectDetection implements ImageListener {
 			        int radius = (int)Math.round(vCircle[2]);
 
 			        
-			        Imgproc.circle(frame, pt, radius, new Scalar(0,255,0), 1);
-			        Imgproc.circle(frame, pt, 2, new Scalar(0,0,255), 1);
+			        Imgproc.circle(frame, pt, radius, new Scalar(0,100,110), 1);
+			        Imgproc.circle(frame, pt, 3, new Scalar(130,255,255), 1);
 			        // radius ændret, var normalt 3
 			        
 			        System.out.println( 26 * 1000 * frame.height()/ ((radius*2)* 23));
